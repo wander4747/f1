@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pilotos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-start>
+                
+            </ion-avatar>
+            <ion-label>
+                <h2 class="name-drive">Nome</h2>
+            </ion-label>
+            <ion-note item-end class="points">pontos</ion-note>
+        </ion-item>
+
+    
+        <ion-item *ngFor="let d of drivers">
+            <ion-avatar item-start>
+                <img src="assets/drivers/{{d.Driver.driverId}}.jpg">
+            </ion-avatar>
+            <ion-label>
+                <h2 class="name-drive">{{d.Driver.givenName}} {{d.Driver.familyName}}<span class="team" *ngIf="d.Constructors[0]">{{d.Constructors[0].name}}</span></h2>
+            </ion-label>
+            <ion-note item-end class="points">{{d.points}}</ion-note>
+        </ion-item>
+    </ion-list>
+</ion-content>

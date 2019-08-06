@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Corridas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            Próximas corridas
+        </ion-list-header>
+        <ion-item *ngFor="let r of futureRaces">
+            <ion-thumbnail item-start>
+                <img src="assets/flags/{{r.Circuit.circuitId}}.jpg">
+            </ion-thumbnail>
+            <ion-label>
+                <h2 class="name-race">{{r.raceName}} </h2>
+            </ion-label>
+            <ion-note item-end class="date">{{r.date | date: 'dd/MM/yyyy' }}</ion-note>
+        </ion-item>
+    </ion-list>
+    
+    <ion-list>
+        <ion-list-header>
+            Corridas passadas
+        </ion-list-header>
+        <ion-item *ngFor="let r of pastRaces">
+            <ion-thumbnail slot="start">
+                <ion-img src="assets/flags/{{r.Circuit.circuitId}}.jpg"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+                <h2 class="name-race">{{r.raceName}} </h2>
+            </ion-label>
+            <ion-note item-end class="date">{{r.date | date: 'dd/MM/yyyy' }}</ion-note>
+        </ion-item>
+    </ion-list>
+</ion-content>

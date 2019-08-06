@@ -1,0 +1,24 @@
+.name-team{
+    margin-left: 15px;
+    span{
+        display: block;
+        text-transform: uppercase;
+        color: #666;
+        font-size: 10px;
+    }
+}
+.points{
+    margin-top: 25px;
+    text-align: right;
+    span{
+        display: block;
+        text-transform: uppercase;
+        color: #666;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: -8px;
+    }
+}
+ion-thumbnail{
+    height: auto;
+}

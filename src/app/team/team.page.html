@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Equipes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>
+                <h2 class="name-team">Nome</h2>
+            </ion-label>
+            <ion-note item-end class="points">Pontos</ion-note>
+        </ion-item>
+
+        <ion-item *ngFor="let t of teams">
+            <ion-thumbnail item-start>
+                <img src="assets/teams/{{t.Constructor.constructorId}}.jpg">
+            </ion-thumbnail>
+            <ion-label>
+                <h2 class="name-team">{{t.Constructor.name}}<span class="team">{{t.Constructor.nationality}}</span></h2>
+            </ion-label>
+            <ion-note item-end class="points"><span class="">{{t.points}}</span>{{t.wins}} vitoria(s)</ion-note>
+        </ion-item>
+    </ion-list>
+</ion-content>
